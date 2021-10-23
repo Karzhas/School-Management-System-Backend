@@ -10,6 +10,7 @@ public class TestController {
     @GetMapping("/test")
     public int testRest(){
         System.out.println("ASDASDASD");
+        System.out.println("!");
         return 3;
     }
 
