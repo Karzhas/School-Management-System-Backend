@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class TeacherController {
 
     @GetMapping(value = "/test")
-    public String testApi(@RequestParam(value = "q", defaultValue = "asdd") String name){
-        String d = name;
-        return name;
+    public TestPojo testApi(@RequestParam(value = "q", defaultValue = "asdd") String name){
+        return new TestPojo(name);
     }
 
 
