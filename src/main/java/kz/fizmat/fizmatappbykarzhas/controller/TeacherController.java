@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TeacherController {
 
     @GetMapping(value = "/test")
-    public String testApi(@RequestParam(value = "q") String name){
+    public String testApi(@RequestParam(value = "q", defaultValue = "asdd") String name){
         String d = name;
         return name;
     }
