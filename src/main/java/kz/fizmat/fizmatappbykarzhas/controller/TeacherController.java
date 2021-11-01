@@ -1,8 +1,7 @@
 package kz.fizmat.fizmatappbykarzhas.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import kz.fizmat.fizmatappbykarzhas.model.Teacher;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TeacherController {
@@ -12,6 +11,11 @@ public class TeacherController {
         return new TestPojo(name);
     }
 
+    @PostMapping(value = "/teacher")
+    public Teacher addTeacher(@RequestBody Teacher newTeacher){
+        System.out.println("!");
+        return newTeacher;
+    }
 
 
 }

@@ -1,28 +1,33 @@
 package kz.fizmat.fizmatappbykarzhas.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Teacher {
     String name;
     String surname;
     String patronymic;
-    boolean gender;
+    String gender;
     String nationality;
-
     String birthDate;
-
     String education;
     String qualification;
-    boolean isGraduated;
+    String isGraduated;
     String pedagogicalExperience;
     String generalExperience;
     String category;
     String teachesInGrades;
-    boolean isFullTimeEmployee;
+    String isFullTimeEmployee;
     String maritalStatus;
-    int numberOfChildren;
+    String numberOfChildren;
     String awards;
+
 }
