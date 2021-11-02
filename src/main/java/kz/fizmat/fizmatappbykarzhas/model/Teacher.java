@@ -1,6 +1,7 @@
 package kz.fizmat.fizmatappbykarzhas.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,6 +18,7 @@ import java.util.List;
 public class Teacher {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    @JsonIgnore
     int id;
     String name;
     String surname;
