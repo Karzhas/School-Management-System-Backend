@@ -19,9 +19,11 @@ public class TeacherController {
     TeacherService service;
 
 
+
+
     @GetMapping(value = "/test")
-    public TestPojo testApi(@RequestParam(value = "q", defaultValue = "asdd") String name){
-        return new TestPojo(name);
+    public Teacher findByNameAndSurname(@RequestParam(value = "n") String name, @RequestParam(value = "s") String surname){
+        return service.findByNameAndSurname(name,surname);
     }
 
     @PostMapping(value = "/teacher")
@@ -32,6 +34,11 @@ public class TeacherController {
     @GetMapping(value = "/teachers")
     public List<Teacher> getTeachers(){
         return service.getTeachers();
+    }
+
+    @PutMapping(value = "/teacher")
+    public Teacher updateTeacher(@RequestBody Teacher updatedTeacher){
+        return service.updateTeacher(updatedTeacher);
     }
 
 
