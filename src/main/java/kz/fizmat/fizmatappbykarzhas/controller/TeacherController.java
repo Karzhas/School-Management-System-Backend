@@ -19,7 +19,10 @@ public class TeacherController {
     TeacherService service;
 
 
-
+    @GetMapping(value = "/del")
+    public void deleteAll(){
+        service.deleteData();
+    }
 
     @GetMapping(value = "/test")
     public Teacher findByNameAndSurname(@RequestParam(value = "n") String name, @RequestParam(value = "s") String surname){
@@ -37,8 +40,8 @@ public class TeacherController {
     }
 
     @PutMapping(value = "/teacher")
-    public Teacher updateTeacher(@RequestBody Teacher updatedTeacher){
-        return service.updateTeacher(updatedTeacher);
+    public Teacher updateTeacher(@RequestParam(value = "n") String name, @RequestParam(value = "s") String surname, @RequestBody Teacher updatedTeacher){
+        return service.updateTeacher(name, surname, updatedTeacher);
     }
 
 

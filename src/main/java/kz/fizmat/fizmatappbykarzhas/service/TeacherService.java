@@ -25,8 +25,12 @@ public class TeacherService {
         return repository.findByNameAndSurname(name,surname);
     }
 
-    public Teacher updateTeacher(Teacher teacher){
-        Teacher oldTeacher = repository.findByNameAndSurname(teacher.getName(), teacher.getSurname());
+    public void deleteData(){
+        repository.deleteAll();
+    }
+
+    public Teacher updateTeacher(String name, String surname, Teacher teacher){
+        Teacher oldTeacher = repository.findByNameAndSurname(name,surname);
         oldTeacher.setName(teacher.getName());
         oldTeacher.setSurname(teacher.getSurname());
         oldTeacher.setPatronymic(teacher.getPatronymic());
