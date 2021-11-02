@@ -40,4 +40,27 @@ public class Teacher {
     String numberOfChildren;
     String awards;
 
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                ", gender='" + gender + '\'' +
+                ", nationality='" + nationality + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", education='" + education + '\'' +
+                ", qualification='" + qualification + '\'' +
+                ", isGraduated='" + isGraduated + '\'' +
+                ", pedagogicalExperience='" + pedagogicalExperience + '\'' +
+                ", generalExperience='" + generalExperience + '\'' +
+                ", category='" + category + '\'' +
+                ", teachesInGrades='" + teachesInGrades + '\'' +
+                ", isFullTimeEmployee='" + isFullTimeEmployee + '\'' +
+                ", maritalStatus='" + maritalStatus + '\'' +
+                ", numberOfChildren='" + numberOfChildren + '\'' +
+                ", awards='" + awards + '\'' +
+                '}';
+    }
 }

@@ -41,6 +41,7 @@ public class TeacherController {
 
     @PutMapping(value = "/teacher")
     public Teacher updateTeacher(@RequestParam(value = "n") String name, @RequestParam(value = "s") String surname, @RequestBody Teacher updatedTeacher){
+        System.out.println(updatedTeacher.toString());
         return service.updateTeacher(name, surname, updatedTeacher);
     }
 
