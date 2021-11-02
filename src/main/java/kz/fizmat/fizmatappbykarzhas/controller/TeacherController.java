@@ -2,6 +2,8 @@ package kz.fizmat.fizmatappbykarzhas.controller;
 
 import kz.fizmat.fizmatappbykarzhas.model.Teacher;
 import kz.fizmat.fizmatappbykarzhas.service.TeacherService;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.*;
@@ -9,10 +11,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@NoArgsConstructor
+@AllArgsConstructor
 public class TeacherController {
 
     @Autowired
     TeacherService service;
+
 
     @GetMapping(value = "/test")
     public TestPojo testApi(@RequestParam(value = "q", defaultValue = "asdd") String name){
