@@ -45,5 +45,11 @@ public class TeacherController {
         return service.updateTeacher(name, surname, updatedTeacher);
     }
 
+    @DeleteMapping(value = "/teacher")
+    public void deleteTeacher(@RequestParam(value = "n") String name, @RequestParam(value = "s") String surname){
+        System.out.println("DELETING: " + name + " " + surname);
+        service.deleteTeacher(name,surname);
+    }
+
 
 }

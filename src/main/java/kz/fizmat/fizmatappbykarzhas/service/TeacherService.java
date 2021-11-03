@@ -52,4 +52,8 @@ public class TeacherService {
 
     }
 
+    public void deleteTeacher(String name, String surname) {
+        Teacher oldTeacher = repository.findByNameAndSurname(name,surname);
+        repository.delete(oldTeacher);
+    }
 }
