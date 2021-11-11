@@ -40,18 +40,18 @@ public class TeacherController {
     }
 
     // delete
-    @PutMapping(value = "/teacher")
-    public Teacher updateTeacher(@RequestParam(value = "n") String name, @RequestParam(value = "s") String surname, @RequestBody Teacher updatedTeacher){
-        System.out.println(updatedTeacher.toString());
-        return service.updateTeacher(name, surname, updatedTeacher);
-    }
+//    @PutMapping(value = "/teacher")
+//    public Teacher updateTeacher(@RequestParam(value = "n") String name, @RequestParam(value = "s") String surname, @RequestBody Teacher updatedTeacher){
+//        System.out.println(updatedTeacher.toString());
+//        return service.updateTeacher(name, surname, updatedTeacher);
+//    }
 
     // delete
-    @DeleteMapping(value = "/teacher")
-    public void deleteTeacher(@RequestParam(value = "n") String name, @RequestParam(value = "s") String surname){
-        System.out.println("DELETING: " + name + " " + surname);
-        service.deleteTeacher(name,surname);
-    }
+//    @DeleteMapping(value = "/teacher")
+//    public void deleteTeacher(@RequestParam(value = "n") String name, @RequestParam(value = "s") String surname){
+//        System.out.println("DELETING: " + name + " " + surname);
+//        service.deleteTeacher(name,surname);
+//    }
 
 
     @DeleteMapping(value = "/teacher/{id}")
