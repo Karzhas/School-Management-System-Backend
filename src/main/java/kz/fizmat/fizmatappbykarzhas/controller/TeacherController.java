@@ -18,8 +18,12 @@ public class TeacherController {
     @Autowired
     TeacherService service;
 
+    @GetMapping(value = "/wakeupHerokuServer")
+    public void wakeupHerokuServer(){
+        System.out.println("wake up NEO!");
+    }
 
-    @GetMapping(value = "/del")
+    @GetMapping(value = "/delete")
     public void deleteAll(){
         service.deleteData();
     }
