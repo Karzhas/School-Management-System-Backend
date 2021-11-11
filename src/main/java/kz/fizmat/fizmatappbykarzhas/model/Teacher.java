@@ -20,7 +20,6 @@ import java.util.List;
 public class Teacher {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    @JsonIgnore
     int id;
     String name;
     String surname;
