@@ -36,7 +36,7 @@ public class Teacher {
     String teachesInGrades;
     String isFullTimeEmployee;
     String maritalStatus;
-    String numberOfChildren;
+    int numberOfChildren;
     String awards;
 
     @Override
