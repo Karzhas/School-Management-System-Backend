@@ -25,7 +25,7 @@ public class Teacher {
     private String name;
     private String surname;
     private String patronymic;
-    private char gender;
+    private boolean gender;
     private String nationality;
     private LocalDate birthDate;
     private String education;
