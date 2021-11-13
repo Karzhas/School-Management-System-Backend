@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -20,24 +21,25 @@ import java.util.List;
 public class Teacher {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    int id;
-    String name;
-    String surname;
-    String patronymic;
-    String gender;
-    String nationality;
-    String birthDate;
-    String education;
-    String qualification;
-    String isGraduated;
-    String pedagogicalExperience;
-    String generalExperience;
-    String category;
-    String teachesInGrades;
-    String isFullTimeEmployee;
-    String maritalStatus;
-    int numberOfChildren;
-    String awards;
+    private int id;
+    private String name;
+    private String surname;
+    private String patronymic;
+    private char gender;
+    private String nationality;
+    private LocalDate birthDate;
+    private String education;
+    private String qualification;
+    private LocalDate qualificationDate;
+    private boolean isGraduated;
+    private Integer pedagogicalExperience;
+    private Integer generalExperience;
+    private String category;
+    private String teachesInGrades;
+    private boolean isFullTimeEmployee;
+    private String maritalStatus;
+    private Integer numberOfChildren;
+    private String awards;
 
     @Override
     public String toString() {
