@@ -1,7 +1,5 @@
 package kz.fizmat.fizmatappbykarzhas.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,8 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -31,12 +27,12 @@ public class Teacher {
     private String education;
     private String qualification;
     private LocalDate qualificationDate;
-    private boolean isGraduated;
+    private boolean graduated;
     private Integer pedagogicalExperience;
     private Integer generalExperience;
     private String category;
     private String teachesInGrades;
-    private boolean isFullTimeEmployee;
+    private boolean fullTimeEmployee;
     private String maritalStatus;
     private Integer numberOfChildren;
     private String awards;
@@ -53,12 +49,12 @@ public class Teacher {
                 ", birthDate='" + birthDate + '\'' +
                 ", education='" + education + '\'' +
                 ", qualification='" + qualification + '\'' +
-                ", isGraduated='" + isGraduated + '\'' +
+                ", isGraduated='" + graduated + '\'' +
                 ", pedagogicalExperience='" + pedagogicalExperience + '\'' +
                 ", generalExperience='" + generalExperience + '\'' +
                 ", category='" + category + '\'' +
                 ", teachesInGrades='" + teachesInGrades + '\'' +
-                ", isFullTimeEmployee='" + isFullTimeEmployee + '\'' +
+                ", isFullTimeEmployee='" + fullTimeEmployee + '\'' +
                 ", maritalStatus='" + maritalStatus + '\'' +
                 ", numberOfChildren='" + numberOfChildren + '\'' +
                 ", awards='" + awards + '\'' +
