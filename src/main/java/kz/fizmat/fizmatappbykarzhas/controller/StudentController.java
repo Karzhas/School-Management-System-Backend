@@ -19,7 +19,10 @@ public class StudentController {
     StudentService service;
 
 
-
+    @GetMapping(value = "/deleteStudents")
+    public void deleteAll(){
+        service.deleteData();
+    }
 
 
     @PostMapping(value = "/student")

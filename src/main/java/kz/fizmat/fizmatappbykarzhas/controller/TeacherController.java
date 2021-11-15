@@ -23,7 +23,7 @@ public class TeacherController {
         System.out.println("wake up NEO!");
     }
 
-    @GetMapping(value = "/delete")
+    @GetMapping(value = "/deleteTeachers")
     public void deleteAll(){
         service.deleteData();
     }
