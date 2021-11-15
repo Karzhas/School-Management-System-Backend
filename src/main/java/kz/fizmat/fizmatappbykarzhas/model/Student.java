@@ -32,8 +32,8 @@ public class Student {
     private String sportAchievements;
     private String achievementsAtTheOlympiads;
     private LocalDate yearOfAdmission;
-    private boolean isGrant;
-    private boolean isLargeFamily;
+    private boolean grant;
+    private boolean largeFamily;
     private boolean freeFromPhysicalEducation;
 
 }
